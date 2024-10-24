@@ -1,0 +1,265 @@
+
+mysql> CREATE DATABASE RUHANDE;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> USE RUHANDE;
+Database changed
+mysql> CREATE TABLE NGOMA(
+    -> ID INT(16),
+    -> F_NAME CHAR(20),
+    -> L_NAME CHAR(20),
+    -> GENDER CHAR(6);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5
+mysql> CREATE TABLE NGOMA(
+    -> ID INT (16),
+    -> F_NAME CHAR(20),
+    -> L_NAME CHAR(20),
+    -> GENDER CHAR(6),
+    -> PROVINCE CHAR(10),
+    -> DISTRICT CHAR(20),
+    -> SECTOR CHAR(10),
+    -> CELL VARCHAR(12),
+    -> E_MAIL VARCHAR(20),
+    -> TELEPHONE VARCHAR(15));
+Query OK, 0 rows affected, 1 warning (0.02 sec)
+
+mysql> INSERT INTO NGOMA VALUES(
+    -> 1,"Dieudonne","IRADUKUNDA","male","WEST","KARONGI","BWISHYURA","KABUYE","Dieudonne@gmail.com","0782434536");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES(2,"Grace","MUNEZERO","Female","SOUTH","HUYE","TUMBA","RANGO","grace@gmail.com","0782434446");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES(3,"Wilson","RUDASINGWA","Male","SOUTH","HUYE","TUMBA","RANGO","wilson@gmail.com","0782334234");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES(4,"Olivier","HABINGABIRE","Male","KIGALI","KICUKIRO","GAHANGA","MULINJA","olivier@gmail.com","0782334334");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES(5,"Bahati","HAKIZIMANA","Male","SOUTH","HUYE","NGOMA","MADINA","bahati@gmail.com","0723456734");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES(6,"Benoit","NIYOGISUBIZO","Male","SOUTH","HUYE","NGOMA ","RWERU","benoit@gmail.com","0783456734");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES(6,"Benoit","NIYOGISUBIZO","Male","SOUTH","HUYE","NGOMA ","RWERU","benoit@gmail.com","0783456734");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES(7,"Elyse","NIYONKURU","Male","SOUTH","HUYE","NGOMA ","RWERU","elyse@gmail.com","0733456734");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES(8,"Herbert","HESHIMA","Male","WEST","RUBAVU","GISENYI","umuganda","heshima@gmail.com","0733456834");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO NGOMA VALUES(9,"Brian","MUGISHA","Male","EAST","RWAMAGANA","RWERU","RWAHURE","brian@gmail.com","0733456830");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES(10,"Rian",ISHIMWE","Female","EAST","RWAMAGANA","RWERU","RWAHURE","rian@gmail.com","0733456810");
+    "> INSERT INTO NGOMA VALUES(10,"Rian",ISHIMWE","Female","EAST","RWAMAGANA","RWERU","RWAHURE","rian@gmail.com","0733456810");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '","Female","EAST","RWAMAGANA","RWERU","RWAHURE","rian@gmail.com","0733456810");
+' at line 1
+mysql> INSERT INTO NGOMA VALUES(10,"Rian","ISHIMWE","Female","EAST","RWAMAGANA","RWERU","RWAHURE","rian@gmail.com","0733456810");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select* from ngoma;
++------+-----------+--------------+--------+----------+-----------+-----------+----------+---------------------+------------+
+| ID   | F_NAME    | L_NAME       | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL     | E_MAIL              | TELEPHONE  |
++------+-----------+--------------+--------+----------+-----------+-----------+----------+---------------------+------------+
+|    1 | Dieudonne | IRADUKUNDA   | male   | WEST     | KARONGI   | BWISHYURA | KABUYE   | Dieudonne@gmail.com | 0782434536 |
+|    2 | Grace     | MUNEZERO     | Female | SOUTH    | HUYE      | TUMBA     | RANGO    | grace@gmail.com     | 0782434446 |
+|    3 | Wilson    | RUDASINGWA   | Male   | SOUTH    | HUYE      | TUMBA     | RANGO    | wilson@gmail.com    | 0782334234 |
+|    4 | Olivier   | HABINGABIRE  | Male   | KIGALI   | KICUKIRO  | GAHANGA   | MULINJA  | olivier@gmail.com   | 0782334334 |
+|    5 | Bahati    | HAKIZIMANA   | Male   | SOUTH    | HUYE      | NGOMA     | MADINA   | bahati@gmail.com    | 0723456734 |
+|    6 | Benoit    | NIYOGISUBIZO | Male   | SOUTH    | HUYE      | NGOMA     | RWERU    | benoit@gmail.com    | 0783456734 |
+|    6 | Benoit    | NIYOGISUBIZO | Male   | SOUTH    | HUYE      | NGOMA     | RWERU    | benoit@gmail.com    | 0783456734 |
+|    7 | Elyse     | NIYONKURU    | Male   | SOUTH    | HUYE      | NGOMA     | RWERU    | elyse@gmail.com     | 0733456734 |
+|    8 | Herbert   | HESHIMA      | Male   | WEST     | RUBAVU    | GISENYI   | umuganda | heshima@gmail.com   | 0733456834 |
+|    9 | Brian     | MUGISHA      | Male   | EAST     | RWAMAGANA | RWERU     | RWAHURE  | brian@gmail.com     | 0733456830 |
+|   10 | Rian      | ISHIMWE      | Female | EAST     | RWAMAGANA | RWERU     | RWAHURE  | rian@gmail.com      | 0733456810 |
++------+-----------+--------------+--------+----------+-----------+-----------+----------+---------------------+------------+
+11 rows in set (0.00 sec)
+
+mysql> ALTER TABLE NGOMA ADD ISIBO CHAR(20);
+Query OK, 11 rows affected (0.04 sec)
+Records: 11  Duplicates: 0  Warnings: 0
+
+mysql> SELECT* FROM NGOMA;
++------+-----------+--------------+--------+----------+-----------+-----------+----------+---------------------+------------+-------+
+| ID   | F_NAME    | L_NAME       | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL     | E_MAIL              | TELEPHONE  | ISIBO |
++------+-----------+--------------+--------+----------+-----------+-----------+----------+---------------------+------------+-------+
+|    1 | Dieudonne | IRADUKUNDA   | male   | WEST     | KARONGI   | BWISHYURA | KABUYE   | Dieudonne@gmail.com | 0782434536 | NULL  |
+|    2 | Grace     | MUNEZERO     | Female | SOUTH    | HUYE      | TUMBA     | RANGO    | grace@gmail.com     | 0782434446 | NULL  |
+|    3 | Wilson    | RUDASINGWA   | Male   | SOUTH    | HUYE      | TUMBA     | RANGO    | wilson@gmail.com    | 0782334234 | NULL  |
+|    4 | Olivier   | HABINGABIRE  | Male   | KIGALI   | KICUKIRO  | GAHANGA   | MULINJA  | olivier@gmail.com   | 0782334334 | NULL  |
+|    5 | Bahati    | HAKIZIMANA   | Male   | SOUTH    | HUYE      | NGOMA     | MADINA   | bahati@gmail.com    | 0723456734 | NULL  |
+|    6 | Benoit    | NIYOGISUBIZO | Male   | SOUTH    | HUYE      | NGOMA     | RWERU    | benoit@gmail.com    | 0783456734 | NULL  |
+|    6 | Benoit    | NIYOGISUBIZO | Male   | SOUTH    | HUYE      | NGOMA     | RWERU    | benoit@gmail.com    | 0783456734 | NULL  |
+|    7 | Elyse     | NIYONKURU    | Male   | SOUTH    | HUYE      | NGOMA     | RWERU    | elyse@gmail.com     | 0733456734 | NULL  |
+|    8 | Herbert   | HESHIMA      | Male   | WEST     | RUBAVU    | GISENYI   | umuganda | heshima@gmail.com   | 0733456834 | NULL  |
+|    9 | Brian     | MUGISHA      | Male   | EAST     | RWAMAGANA | RWERU     | RWAHURE  | brian@gmail.com     | 0733456830 | NULL  |
+|   10 | Rian      | ISHIMWE      | Female | EAST     | RWAMAGANA | RWERU     | RWAHURE  | rian@gmail.com      | 0733456810 | NULL  |
++------+-----------+--------------+--------+----------+-----------+-----------+----------+---------------------+------------+-------+
+11 rows in set (0.00 sec)
+
+mysql> UPDATE NGOMA SET ISIBO= "UBUTWALI" WHERE ID= 1 AND ID = 5;
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+mysql> SELECT *FROM NGOMA;
++------+-----------+--------------+--------+----------+-----------+-----------+----------+---------------------+------------+-------+
+| ID   | F_NAME    | L_NAME       | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL     | E_MAIL              | TELEPHONE  | ISIBO |
++------+-----------+--------------+--------+----------+-----------+-----------+----------+---------------------+------------+-------+
+|    1 | Dieudonne | IRADUKUNDA   | male   | WEST     | KARONGI   | BWISHYURA | KABUYE   | Dieudonne@gmail.com | 0782434536 | NULL  |
+|    2 | Grace     | MUNEZERO     | Female | SOUTH    | HUYE      | TUMBA     | RANGO    | grace@gmail.com     | 0782434446 | NULL  |
+|    3 | Wilson    | RUDASINGWA   | Male   | SOUTH    | HUYE      | TUMBA     | RANGO    | wilson@gmail.com    | 0782334234 | NULL  |
+|    4 | Olivier   | HABINGABIRE  | Male   | KIGALI   | KICUKIRO  | GAHANGA   | MULINJA  | olivier@gmail.com   | 0782334334 | NULL  |
+|    5 | Bahati    | HAKIZIMANA   | Male   | SOUTH    | HUYE      | NGOMA     | MADINA   | bahati@gmail.com    | 0723456734 | NULL  |
+|    6 | Benoit    | NIYOGISUBIZO | Male   | SOUTH    | HUYE      | NGOMA     | RWERU    | benoit@gmail.com    | 0783456734 | NULL  |
+|    6 | Benoit    | NIYOGISUBIZO | Male   | SOUTH    | HUYE      | NGOMA     | RWERU    | benoit@gmail.com    | 0783456734 | NULL  |
+|    7 | Elyse     | NIYONKURU    | Male   | SOUTH    | HUYE      | NGOMA     | RWERU    | elyse@gmail.com     | 0733456734 | NULL  |
+|    8 | Herbert   | HESHIMA      | Male   | WEST     | RUBAVU    | GISENYI   | umuganda | heshima@gmail.com   | 0733456834 | NULL  |
+|    9 | Brian     | MUGISHA      | Male   | EAST     | RWAMAGANA | RWERU     | RWAHURE  | brian@gmail.com     | 0733456830 | NULL  |
+|   10 | Rian      | ISHIMWE      | Female | EAST     | RWAMAGANA | RWERU     | RWAHURE  | rian@gmail.com      | 0733456810 | NULL  |
++------+-----------+--------------+--------+----------+-----------+-----------+----------+---------------------+------------+-------+
+11 rows in set (0.00 sec)
+
+mysql> UPDATE NGOMA SET ISIBO= "UBUTWALI" WHERE ID= 1;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM NGOMA;
++------+-----------+--------------+--------+----------+-----------+-----------+----------+---------------------+------------+----------+
+| ID   | F_NAME    | L_NAME       | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL     | E_MAIL              | TELEPHONE  | ISIBO    |
++------+-----------+--------------+--------+----------+-----------+-----------+----------+---------------------+------------+----------+
+|    1 | Dieudonne | IRADUKUNDA   | male   | WEST     | KARONGI   | BWISHYURA | KABUYE   | Dieudonne@gmail.com | 0782434536 | UBUTWALI |
+|    2 | Grace     | MUNEZERO     | Female | SOUTH    | HUYE      | TUMBA     | RANGO    | grace@gmail.com     | 0782434446 | NULL     |
+|    3 | Wilson    | RUDASINGWA   | Male   | SOUTH    | HUYE      | TUMBA     | RANGO    | wilson@gmail.com    | 0782334234 | NULL     |
+|    4 | Olivier   | HABINGABIRE  | Male   | KIGALI   | KICUKIRO  | GAHANGA   | MULINJA  | olivier@gmail.com   | 0782334334 | NULL     |
+|    5 | Bahati    | HAKIZIMANA   | Male   | SOUTH    | HUYE      | NGOMA     | MADINA   | bahati@gmail.com    | 0723456734 | NULL     |
+|    6 | Benoit    | NIYOGISUBIZO | Male   | SOUTH    | HUYE      | NGOMA     | RWERU    | benoit@gmail.com    | 0783456734 | NULL     |
+|    6 | Benoit    | NIYOGISUBIZO | Male   | SOUTH    | HUYE      | NGOMA     | RWERU    | benoit@gmail.com    | 0783456734 | NULL     |
+|    7 | Elyse     | NIYONKURU    | Male   | SOUTH    | HUYE      | NGOMA     | RWERU    | elyse@gmail.com     | 0733456734 | NULL     |
+|    8 | Herbert   | HESHIMA      | Male   | WEST     | RUBAVU    | GISENYI   | umuganda | heshima@gmail.com   | 0733456834 | NULL     |
+|    9 | Brian     | MUGISHA      | Male   | EAST     | RWAMAGANA | RWERU     | RWAHURE  | brian@gmail.com     | 0733456830 | NULL     |
+|   10 | Rian      | ISHIMWE      | Female | EAST     | RWAMAGANA | RWERU     | RWAHURE  | rian@gmail.com      | 0733456810 | NULL     |
++------+-----------+--------------+--------+----------+-----------+-----------+----------+---------------------+------------+----------+
+11 rows in set (0.00 sec)
+
+mysql> UPDATE NGOMA SET ISIBO= "UBUTWALI" WHERE ID= 2;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE NGOMA SET ISIBO= "GUKUNDIGIHUGU" WHERE ID= 3;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE NGOMA SET ISIBO= "UBUDAKEMWA" WHERE ID= 4;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE NGOMA SET ISIBO= "UBUDAKEMWA" WHERE ID= 5;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE NGOMA SET ISIBO= "UBUDAKEMWA" WHERE ID= 6;
+Query OK, 2 rows affected (0.00 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> UPDATE NGOMA SET ISIBO= "UNYANGAMUGAYO" WHERE ID= 7;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE NGOMA SET ISIBO= "UNYANGAMUGAYO" WHERE ID= 8;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE NGOMA SET ISIBO= "AGACIRO" WHERE ID= 9;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE NGOMA SET ISIBO= "AGACIRO" WHERE ID= 10;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT *FROM NGOMA;
++------+-----------+--------------+--------+----------+-----------+-----------+----------+---------------------+------------+---------------+
+| ID   | F_NAME    | L_NAME       | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL     | E_MAIL              | TELEPHONE  | ISIBO         |
++------+-----------+--------------+--------+----------+-----------+-----------+----------+---------------------+------------+---------------+
+|    1 | Dieudonne | IRADUKUNDA   | male   | WEST     | KARONGI   | BWISHYURA | KABUYE   | Dieudonne@gmail.com | 0782434536 | UBUTWALI      |
+|    2 | Grace     | MUNEZERO     | Female | SOUTH    | HUYE      | TUMBA     | RANGO    | grace@gmail.com     | 0782434446 | UBUTWALI      |
+|    3 | Wilson    | RUDASINGWA   | Male   | SOUTH    | HUYE      | TUMBA     | RANGO    | wilson@gmail.com    | 0782334234 | GUKUNDIGIHUGU |
+|    4 | Olivier   | HABINGABIRE  | Male   | KIGALI   | KICUKIRO  | GAHANGA   | MULINJA  | olivier@gmail.com   | 0782334334 | UBUDAKEMWA    |
+|    5 | Bahati    | HAKIZIMANA   | Male   | SOUTH    | HUYE      | NGOMA     | MADINA   | bahati@gmail.com    | 0723456734 | UBUDAKEMWA    |
+|    6 | Benoit    | NIYOGISUBIZO | Male   | SOUTH    | HUYE      | NGOMA     | RWERU    | benoit@gmail.com    | 0783456734 | UBUDAKEMWA    |
+|    6 | Benoit    | NIYOGISUBIZO | Male   | SOUTH    | HUYE      | NGOMA     | RWERU    | benoit@gmail.com    | 0783456734 | UBUDAKEMWA    |
+|    7 | Elyse     | NIYONKURU    | Male   | SOUTH    | HUYE      | NGOMA     | RWERU    | elyse@gmail.com     | 0733456734 | UNYANGAMUGAYO |
+|    8 | Herbert   | HESHIMA      | Male   | WEST     | RUBAVU    | GISENYI   | umuganda | heshima@gmail.com   | 0733456834 | UNYANGAMUGAYO |
+|    9 | Brian     | MUGISHA      | Male   | EAST     | RWAMAGANA | RWERU     | RWAHURE  | brian@gmail.com     | 0733456830 | AGACIRO       |
+|   10 | Rian      | ISHIMWE      | Female | EAST     | RWAMAGANA | RWERU     | RWAHURE  | rian@gmail.com      | 0733456810 | AGACIRO       |
++------+-----------+--------------+--------+----------+-----------+-----------+----------+---------------------+------------+---------------+
+11 rows in set (0.00 sec)
+
+mysql> SELECT *FROM NGOMA WHERE GENDER= "MALE" AND PROVINCE = 'SOUTH';
++------+--------+--------------+--------+----------+----------+--------+--------+------------------+------------+---------------+
+| ID   | F_NAME | L_NAME       | GENDER | PROVINCE | DISTRICT | SECTOR | CELL   | E_MAIL           | TELEPHONE  | ISIBO         |
++------+--------+--------------+--------+----------+----------+--------+--------+------------------+------------+---------------+
+|    3 | Wilson | RUDASINGWA   | Male   | SOUTH    | HUYE     | TUMBA  | RANGO  | wilson@gmail.com | 0782334234 | GUKUNDIGIHUGU |
+|    5 | Bahati | HAKIZIMANA   | Male   | SOUTH    | HUYE     | NGOMA  | MADINA | bahati@gmail.com | 0723456734 | UBUDAKEMWA    |
+|    6 | Benoit | NIYOGISUBIZO | Male   | SOUTH    | HUYE     | NGOMA  | RWERU  | benoit@gmail.com | 0783456734 | UBUDAKEMWA    |
+|    6 | Benoit | NIYOGISUBIZO | Male   | SOUTH    | HUYE     | NGOMA  | RWERU  | benoit@gmail.com | 0783456734 | UBUDAKEMWA    |
+|    7 | Elyse  | NIYONKURU    | Male   | SOUTH    | HUYE     | NGOMA  | RWERU  | elyse@gmail.com  | 0733456734 | UNYANGAMUGAYO |
++------+--------+--------------+--------+----------+----------+--------+--------+------------------+------------+---------------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT *FROM NGOMA WHERE GENDER = "FEMALE" OR PROVINCE = 'WEST';
++------+-----------+------------+--------+----------+-----------+-----------+----------+---------------------+------------+---------------+
+| ID   | F_NAME    | L_NAME     | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL     | E_MAIL              | TELEPHONE  | ISIBO         |
++------+-----------+------------+--------+----------+-----------+-----------+----------+---------------------+------------+---------------+
+|    1 | Dieudonne | IRADUKUNDA | male   | WEST     | KARONGI   | BWISHYURA | KABUYE   | Dieudonne@gmail.com | 0782434536 | UBUTWALI      |
+|    2 | Grace     | MUNEZERO   | Female | SOUTH    | HUYE      | TUMBA     | RANGO    | grace@gmail.com     | 0782434446 | UBUTWALI      |
+|    8 | Herbert   | HESHIMA    | Male   | WEST     | RUBAVU    | GISENYI   | umuganda | heshima@gmail.com   | 0733456834 | UNYANGAMUGAYO |
+|   10 | Rian      | ISHIMWE    | Female | EAST     | RWAMAGANA | RWERU     | RWAHURE  | rian@gmail.com      | 0733456810 | AGACIRO       |
++------+-----------+------------+--------+----------+-----------+-----------+----------+---------------------+------------+---------------+
+4 rows in set (0.00 sec)
+
+mysql> ALTER TABLE NGOMA DROP CELL;
+Query OK, 11 rows affected (0.04 sec)
+Records: 11  Duplicates: 0  Warnings: 0
+
+mysql> SELECT* FROM NGOMA;
++------+-----------+--------------+--------+----------+-----------+-----------+---------------------+------------+---------------+
+| ID   | F_NAME    | L_NAME       | GENDER | PROVINCE | DISTRICT  | SECTOR    | E_MAIL              | TELEPHONE  | ISIBO         |
++------+-----------+--------------+--------+----------+-----------+-----------+---------------------+------------+---------------+
+|    1 | Dieudonne | IRADUKUNDA   | male   | WEST     | KARONGI   | BWISHYURA | Dieudonne@gmail.com | 0782434536 | UBUTWALI      |
+|    2 | Grace     | MUNEZERO     | Female | SOUTH    | HUYE      | TUMBA     | grace@gmail.com     | 0782434446 | UBUTWALI      |
+|    3 | Wilson    | RUDASINGWA   | Male   | SOUTH    | HUYE      | TUMBA     | wilson@gmail.com    | 0782334234 | GUKUNDIGIHUGU |
+|    4 | Olivier   | HABINGABIRE  | Male   | KIGALI   | KICUKIRO  | GAHANGA   | olivier@gmail.com   | 0782334334 | UBUDAKEMWA    |
+|    5 | Bahati    | HAKIZIMANA   | Male   | SOUTH    | HUYE      | NGOMA     | bahati@gmail.com    | 0723456734 | UBUDAKEMWA    |
+|    6 | Benoit    | NIYOGISUBIZO | Male   | SOUTH    | HUYE      | NGOMA     | benoit@gmail.com    | 0783456734 | UBUDAKEMWA    |
+|    6 | Benoit    | NIYOGISUBIZO | Male   | SOUTH    | HUYE      | NGOMA     | benoit@gmail.com    | 0783456734 | UBUDAKEMWA    |
+|    7 | Elyse     | NIYONKURU    | Male   | SOUTH    | HUYE      | NGOMA     | elyse@gmail.com     | 0733456734 | UNYANGAMUGAYO |
+|    8 | Herbert   | HESHIMA      | Male   | WEST     | RUBAVU    | GISENYI   | heshima@gmail.com   | 0733456834 | UNYANGAMUGAYO |
+|    9 | Brian     | MUGISHA      | Male   | EAST     | RWAMAGANA | RWERU     | brian@gmail.com     | 0733456830 | AGACIRO       |
+|   10 | Rian      | ISHIMWE      | Female | EAST     | RWAMAGANA | RWERU     | rian@gmail.com      | 0733456810 | AGACIRO       |
++------+-----------+--------------+--------+----------+-----------+-----------+---------------------+------------+---------------+
+11 rows in set (0.00 sec)
+
+mysql> SELECT ID,F_NAME, L_NAME, TELEPHONE FROM NGOMA;
++------+-----------+--------------+------------+
+| ID   | F_NAME    | L_NAME       | TELEPHONE  |
++------+-----------+--------------+------------+
+|    1 | Dieudonne | IRADUKUNDA   | 0782434536 |
+|    2 | Grace     | MUNEZERO     | 0782434446 |
+|    3 | Wilson    | RUDASINGWA   | 0782334234 |
+|    4 | Olivier   | HABINGABIRE  | 0782334334 |
+|    5 | Bahati    | HAKIZIMANA   | 0723456734 |
+|    6 | Benoit    | NIYOGISUBIZO | 0783456734 |
+|    6 | Benoit    | NIYOGISUBIZO | 0783456734 |
+|    7 | Elyse     | NIYONKURU    | 0733456734 |
+|    8 | Herbert   | HESHIMA      | 0733456834 |
+|    9 | Brian     | MUGISHA      | 0733456830 |
+|   10 | Rian      | ISHIMWE      | 0733456810 |
++------+-----------+--------------+------------+
+11 rows in set (0.00 sec)
+
+mysql>
